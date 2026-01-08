@@ -7,7 +7,7 @@ void setup() {
 var leftX = 45;
 var rightX = 370;
 var sunRadius = 100;
-
+var san = 100;
 
 //🟢Draw Function - Runs on Repeat
 draw = function(){
@@ -18,7 +18,7 @@ draw = function(){
 
   // sun
   fill(255, 170, 0);
-  ellipse(200, 100, sunRadius, sunRadius);
+  ellipse(200, san, sunRadius, sunRadius);
 
   // clouds 
   fill(255, 255, 255);
@@ -33,6 +33,14 @@ draw = function(){
   ellipse(rightX+62, 100, 70, 60);
   ellipse(rightX-62, 100, 70, 60);
   
+  leftX -= 1
+  rightX += 1
+san += 1
+sunRadius *= 99/100
+if(leftX < -100){
+ leftX = 600;}
+ if(rightX > 500){
+  rightX= -200;}
 }
 
 
